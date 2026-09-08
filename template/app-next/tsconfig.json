@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "react-router": ["./src/wasp-shim/react-router"],
+      "wasp/client/router": ["./src/wasp-shim/router"],
+      "wasp/client/auth": ["./src/wasp-shim/auth"],
+      "wasp/client/operations": ["./src/wasp-shim/operations"],
+      "wasp/entities": ["./src/wasp-shim/entities"],
+      "wasp/auth": ["./src/wasp-shim/auth-types"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

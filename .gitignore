@@ -8,3 +8,11 @@ node_modules/
 # We also don't want to ship these ignore rules to the users.
 template/app/migrations
 template/app/package-lock.json
+
+# Private keys and local secrets — never commit these.
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+!*.env.example
